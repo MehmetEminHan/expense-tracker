@@ -9,8 +9,9 @@ import java.util.Date;
 
 @Getter
 @Setter
-@Table(name = "expensetracker")
+@Table(name = "expense")
 @Entity
+
 public class ExpenseEntity {
 
     @Id

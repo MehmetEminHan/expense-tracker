@@ -1,4 +1,4 @@
-package com.ankist.expensetracker.service.expense;
+package com.ankist.expensetracker.service.model;
 
 public class ExpenseCurrency {
 
@@ -13,7 +13,7 @@ public class ExpenseCurrency {
         else if (currency.equals(Dollars))
             return Dollars;
         else
-            return "Null";
+            return null;
 
     }
 }

@@ -1,5 +1,5 @@
 com/ankist/expensetracker/controller/ExpenseRestService.class
-com/ankist/expensetracker/service/expense/ExpenseCurrency.class
+com/ankist/expensetracker/service/model/ExpenseCurrency.class
 com/ankist/expensetracker/repository/ExpenseDAO.class
 com/ankist/expensetracker/ExpenseTrackerApplication.class
 com/ankist/expensetracker/service/expense/ExpenseService.class

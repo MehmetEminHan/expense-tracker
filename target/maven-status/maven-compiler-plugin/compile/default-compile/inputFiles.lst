@@ -1,5 +1,5 @@
-/Users/mehmeteminhanbiyik/Desktop/Java/GitHub/expense-tracker/src/main/java/com/ankist/expensetracker/service/expense/ExpenseCurrency.java
 /Users/mehmeteminhanbiyik/Desktop/Java/GitHub/expense-tracker/src/main/java/com/ankist/expensetracker/repository/ExpenseEntity.java
+/Users/mehmeteminhanbiyik/Desktop/Java/GitHub/expense-tracker/src/main/java/com/ankist/expensetracker/service/model/ExpenseCurrency.java
 /Users/mehmeteminhanbiyik/Desktop/Java/GitHub/expense-tracker/src/main/java/com/ankist/expensetracker/repository/ExpenseCrud.java
 /Users/mehmeteminhanbiyik/Desktop/Java/GitHub/expense-tracker/src/main/java/com/ankist/expensetracker/model/ExpenseDTO.java
 /Users/mehmeteminhanbiyik/Desktop/Java/GitHub/expense-tracker/src/main/java/com/ankist/expensetracker/service/expense/ExpenseService.java

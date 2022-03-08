@@ -1,9 +1,7 @@
 package com.ankist.expensetracker.repository;
 
 import com.ankist.expensetracker.model.ExpenseDTO;
-import com.ankist.expensetracker.service.ServiceMapper;
-import com.ankist.expensetracker.service.model.ExpenseCurrency;
-import com.google.common.collect.Lists;
+import com.ankist.expensetracker.service.model.mapper.ExpenseMapping;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import java.util.List;
@@ -14,17 +12,16 @@ public class ExpenseDAO {
 
     @Autowired
     private ExpenseCrud expenseCrud;
-
-    private ServiceMapper mapper = ServiceMapper.INSTANCE;
+    ExpenseMapping expenseMapping= new ExpenseMapping();
 
     //Get by id dao
     public ExpenseDTO getExpenseById(Integer id){
-        return mapper.mapExpenseEntityToDTO(expenseCrud.findById(id).get());
+        return expenseMapping.getById(expenseCrud,id);
     }
 
     //Get all dao
     public List<ExpenseDTO> getExpenseAll(){
-        return mapper.mapListExpenseEntityToDTO(Lists.newArrayList(expenseCrud.findAll()));
+        return expenseMapping.getAll(expenseCrud);
     }
 
     //Delete by id
@@ -35,15 +32,7 @@ public class ExpenseDAO {
     //save dao
     public void saveAnExpense(Double expenseAmount, String currency, String category, String note) {
 
-        ExpenseDTO expenseDTO = new ExpenseDTO();
-
-        expenseDTO.setExpenseAmount(expenseAmount);
-        expenseDTO.setCurrency(ExpenseCurrency.chooseCurrency(currency));
-        expenseDTO.setCategory(category);
-        expenseDTO.setNote(note);
-
-        expenseCrud.save(mapper.mapExpenseDtoToEntity(expenseDTO));
-
+       expenseMapping.save(expenseCrud,expenseAmount, currency, category, note);
 
     }
 }

@@ -19,7 +19,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     date = "2022-03-07T18:50:22-0500",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17.0.2 (Oracle Corporation)"
 )
-public class ServiceMapperImpl implements ServiceMapper {
+public class ServiceMapperImpl implements ExpenseMapper {
 
     private final DatatypeFactory datatypeFactory;
 

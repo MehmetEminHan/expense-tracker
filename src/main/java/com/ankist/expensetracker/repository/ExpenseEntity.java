@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Date;
 
@@ -11,16 +12,15 @@ import java.util.Date;
 @Setter
 @Table(name = "expense")
 @Entity
-
 public class ExpenseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Integer id;
+    private Long id;
 
     @Column(name = "expense_amount")
-    private Double expenseAmount;
+    private BigDecimal expenseAmount;
 
     @Column(name = "expense_date")
     private Date expenseDate;

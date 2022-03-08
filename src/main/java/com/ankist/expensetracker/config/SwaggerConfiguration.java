@@ -13,5 +13,5 @@ public class SwaggerConfiguration {
     @RequestMapping(value = {"/", "/swagger-ui.html"})
     public String home() {
         return "redirect:/";
-    }git add
+    }
 }

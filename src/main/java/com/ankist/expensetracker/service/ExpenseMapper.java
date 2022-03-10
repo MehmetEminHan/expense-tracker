@@ -10,9 +10,9 @@ import org.mapstruct.factory.Mappers;
 import java.util.List;
 
 @Mapper
-public interface ServiceMapper {
+public interface ExpenseMapper {
 
-    ServiceMapper INSTANCE = Mappers.getMapper(ServiceMapper.class);
+    ExpenseMapper INSTANCE = Mappers.getMapper(ExpenseMapper.class);
     @Named("mapExpenseEntityToDTO")
     ExpenseDTO mapExpenseEntityToDTO(ExpenseEntity expenseEntity);
     ExpenseEntity mapExpenseDtoToEntity(ExpenseDTO expenseDTO);

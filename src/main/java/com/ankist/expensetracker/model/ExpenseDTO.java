@@ -1,21 +1,22 @@
 package com.ankist.expensetracker.model;
 
-
-
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Date;
 
-@Getter
-@Setter
+@Data
+@AllArgsConstructor
 @NoArgsConstructor
-
 public class ExpenseDTO {
 
-    private Integer id;
-    private Double expenseAmount;
+    private Long id;
+    private BigDecimal expenseAmount;
     private Date expenseDate;
     private LocalDateTime registerDate;
     private String currency;
